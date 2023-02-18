@@ -1,15 +1,11 @@
 import "../styles/globals.css";
 import type { AppType } from "next/dist/shared/lib/utils";
-import { ThirdwebProvider } from "@thirdweb-dev/react";
+import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
 import AuthProvider from "../components/AuthProvider";
-//import { ChainId, Altcoinchain } from "@thirdweb-dev/chains";
-import { ThirdwebSDK } from "@thirdweb-dev/sdk";
-import ChainId from "@thirdweb-dev/chains/chains/2330";
-const activeChainId = ChainId.Altcoinchain;
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-  <ThirdwebProvider  activeChain={Altcoinchain}>
+    <ThirdwebProvider desiredChainId={ChainId.Altcoinchain}>
       <AuthProvider>
         <Component {...pageProps} />
       </AuthProvider>
