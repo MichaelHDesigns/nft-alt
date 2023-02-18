@@ -1,8 +1,8 @@
 import "../styles/globals.css";
 import type { AppType } from "next/dist/shared/lib/utils";
-import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
+import { ThirdwebProvider } from "@thirdweb-dev/react";
 import AuthProvider from "../components/AuthProvider";
-import { Altcoinchain } from "@thirdweb-dev/chains";
+import { ChainId } from "@thirdweb-dev/chains";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
