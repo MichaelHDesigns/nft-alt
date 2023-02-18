@@ -7,7 +7,7 @@ import { ThirdwebSDK } from "@thirdweb-dev/sdk";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-  <ThirdwebProvider  activeChain={Altcoinchain}>
+  <ThirdwebProvider  desiredChain={Altcoinchain}>
       <AuthProvider>
         <Component {...pageProps} />
       </AuthProvider>
