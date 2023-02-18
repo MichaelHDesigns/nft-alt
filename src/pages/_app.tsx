@@ -5,9 +5,11 @@ import AuthProvider from "../components/AuthProvider";
 import { Altcoinchain } from "@thirdweb-dev/chains";
 import { ThirdwebSDK } from "@thirdweb-dev/sdk";
 
+const activeChainId = ChainId.Altcoinchain;
+
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-  <ThirdwebProvider  desiredChain={Altcoinchain}>
+  <ThirdwebProvider  activeChain={Altcoinchain}>
       <AuthProvider>
         <Component {...pageProps} />
       </AuthProvider>
