@@ -2,11 +2,11 @@ import "../styles/globals.css";
 import type { AppType } from "next/dist/shared/lib/utils";
 import { ThirdwebProvider } from "@thirdweb-dev/react";
 import AuthProvider from "../components/AuthProvider";
-import { Altcoinchain } from "@thirdweb-dev/chains";
+import { Gnosis } from "@thirdweb-dev/chains";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-  <ThirdwebProvider  activeChain={Altcoinchain}>
+  <ThirdwebProvider  activeChain={Gnosis}>
       <AuthProvider>
         <Component {...pageProps} />
       </AuthProvider>
