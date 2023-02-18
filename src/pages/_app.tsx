@@ -5,7 +5,8 @@ import AuthProvider from "../components/AuthProvider";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <ThirdwebProvider desiredChainId={ChainId.Mumbai}>
+    <ThirdwebProvider  desiredChainId={ChainId.Altcoinchain}
+      chainRpc={{ [ChainId.Altcoinchain]: "https://rpc0.altcoinchain.org/rpc" }}
       <AuthProvider>
         <Component {...pageProps} />
       </AuthProvider>
